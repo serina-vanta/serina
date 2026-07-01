@@ -1,19 +1,138 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-    />
-    <title>Protokit starter</title>
-    <script type="module" crossorigin src="/assets/index-Bpzrjow6.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CgdEtvaO.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serina's Design Projects</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+      background: #f7f8fa;
+      color: #111827;
+      min-height: 100vh;
+    }
+
+    /* ── Topbar ── */
+    .topbar {
+      height: 56px;
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      display: flex;
+      align-items: center;
+      padding: 0 32px;
+      gap: 12px;
+    }
+    .topbar-logo {
+      font-size: 15px;
+      font-weight: 700;
+      color: #111827;
+      letter-spacing: -0.01em;
+    }
+    .topbar-sep { color: #d1d5db; font-size: 18px; }
+    .topbar-subtitle { font-size: 14px; color: #6b7280; }
+
+    /* ── Page ── */
+    .page { max-width: 900px; margin: 0 auto; padding: 40px 32px; }
+
+    .page-title {
+      font-size: 22px;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 4px;
+    }
+    .page-desc {
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 32px;
+    }
+
+    /* ── Project cards ── */
+    .project {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+    .project-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px 12px;
+      border-bottom: 1px solid #f3f4f6;
+    }
+    .project-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: #111827;
+    }
+    .project-badge {
+      font-size: 11px;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 99px;
+      background: #eff6ff;
+      color: #2563eb;
+    }
+
+    /* ── Entry rows ── */
+    .entry {
+      display: grid;
+      grid-template-columns: 140px 1fr auto;
+      align-items: start;
+      gap: 16px;
+      padding: 12px 20px;
+      border-bottom: 1px solid #f3f4f6;
+      font-size: 13px;
+    }
+    .entry:last-child { border-bottom: none; }
+
+    .entry-date { color: #6b7280; padding-top: 1px; white-space: nowrap; }
+    .entry-changes { color: #374151; line-height: 1.5; }
+    .entry-link {
+      font-size: 12px;
+      color: #2563eb;
+      text-decoration: none;
+      white-space: nowrap;
+      padding-top: 2px;
+    }
+    .entry-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <span class="topbar-logo">Serina Chang</span>
+    <span class="topbar-sep">·</span>
+    <span class="topbar-subtitle">Design Projects</span>
+  </div>
+
+  <div class="page">
+    <div class="page-title">Design Projects</div>
+    <div class="page-desc">Prototypes and explorations, organized by project.</div>
+
+    <!-- ── Reporting ── -->
+    <div class="project">
+      <div class="project-header">
+        <span class="project-name">Reporting</span>
+        <span class="project-badge">Active</span>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">Jun 19, 2026</div>
+        <div class="entry-changes">
+          System Summary page — platform topbar, 3 health rings (Control Completion, Automated Tests, Document Status), Open Issues widget with segmented severity bar
+        </div>
+        <a class="entry-link" href="https://serina-git-reporting-vantacom.vercel.app/workspace/acme/summary" target="_blank">Open ↗</a>
+      </div>
+
+    </div>
+
+    <!-- Future projects will be added here -->
+
+  </div>
+
+</body>
 </html>
